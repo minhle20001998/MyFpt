@@ -1,0 +1,55 @@
+.dashboard-edc {
+  margin-top: 2rem;
+  padding: 1rem 1rem 3rem 1rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.dashboard-edc .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-edc .add-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-edc .add-btn:hover {
+  color: #007bff;
+}
+
+.dashboard-edc .loading {
+  color: tomato;
+  font-weight: bold;
+}
+
+.edc-item {
+  padding: 1rem;
+  border: 2px solid tomato;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #084e9a;
+  box-shadow: 1px 1px 5px rgb(165, 33, 10);
+}
+
+.edc-item button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: tomato;
+}
+
+.edc-item button:hover {
+  color: rgb(160, 36, 14);
+}
+
+.edc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}

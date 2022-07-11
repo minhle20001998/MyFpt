@@ -1,0 +1,20 @@
+.main-area {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(51, 51, 51, 0.459),
+      rgba(15, 15, 15, 0.445)
+    ),
+    url("https://danviet.mediacdn.vn/2021/5/5/13-16201969808121934232288.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-content {
+  width: calc(100% - 240px);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.815);
+}

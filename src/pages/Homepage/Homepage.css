@@ -1,0 +1,12 @@
+.homepage {
+  padding: 0.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}

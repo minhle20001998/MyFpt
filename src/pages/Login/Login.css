@@ -1,0 +1,64 @@
+#login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(51, 51, 51, 0.459),
+      rgba(15, 15, 15, 0.445)
+    ),
+    url("https://danviet.mediacdn.vn/2021/5/5/13-16201969808121934232288.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#login form {
+  width: 350px;
+  box-shadow: 0 5px 15px black;
+  padding: 10px 20px 30px 20px;
+  background-color: white;
+}
+
+#login button {
+  background-color: tomato;
+  border: none;
+  height: 42px;
+}
+
+#login button:focus,
+#login input:focus {
+  box-shadow: none;
+  border: 1px solid tomato;
+}
+
+#login button:hover {
+  background-color: rgb(255, 83, 52);
+  box-shadow: none;
+}
+
+#login #title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#login #title span:nth-of-type(1) {
+  font-size: 3rem;
+  color: rgb(218, 79, 54);
+}
+
+#login #title span:nth-of-type(2) {
+  color: #084e9a;
+}
+
+#login #title span:nth-of-type(3) {
+  color: #ea6d22;
+}
+
+#login #title span:nth-of-type(4) {
+  color: #4eb146;
+}

@@ -1,0 +1,25 @@
+.dashboard-card {
+  width: 15rem;
+  height: 8rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.dashboard-card-days-number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ea6d22;
+}
+
+.dashboard-card-title {
+  font-size: 1.25rem;
+  font-weight: bold !important;
+  color: #084e9a;
+}
+
+.dashboard-card-suffix {
+  color: #084e9a;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}

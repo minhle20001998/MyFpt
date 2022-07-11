@@ -1,0 +1,29 @@
+.side-menu {
+  flex-basis: 240px;
+  /* background-color: rgb(255, 248, 241); */
+  background-color: rgba(0, 0, 0, 0.644);
+  height: 100%;
+  border-right: 2px solid rgb(185, 52, 29);
+}
+
+.side-menu-item {
+  font-size: 1.1rem;
+  /* color: rgb(105, 71, 28); */
+  color: rgb(228, 78, 52);
+  padding: 20px;
+  font-weight: bold;
+  /* background-color: rgb(255, 240, 240); */
+  background-color: white;
+  border-bottom: 1px solid rgb(185, 52, 29);
+}
+
+.side-menu-item.active {
+  background-color: tomato;
+  color: white;
+  border-bottom: 1px solid rgb(185, 52, 29);
+}
+.side-menu-item:hover {
+  background-color: rgb(231, 87, 62);
+  color: white;
+  transition: all ease-in-out 0.2s;
+}

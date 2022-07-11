@@ -1,0 +1,66 @@
+.dashboard-tasks {
+  margin-top: 2rem;
+  padding: 1rem 1rem 3rem 1rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.dashboard-tasks .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-tasks .add-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-tasks-item {
+  width: 100%;
+  border: 2px solid #084e9a;
+  box-shadow: 1px 1px 5px #022c58;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  line-height: 2rem;
+}
+
+.dashboard-tasks-item button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-tasks .loading {
+  color: tomato;
+  font-weight: bold;
+}
+
+.task-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: tomato;
+}
+
+.task-property {
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.task-data {
+  font-weight: bold;
+  color: tomato;
+}
+
+.task-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: tomato;
+}
