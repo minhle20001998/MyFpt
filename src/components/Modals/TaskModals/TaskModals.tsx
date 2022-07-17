@@ -19,7 +19,8 @@ export default function TaskModals(props: PropsType) {
     onHide: propsHandleCloseModal,
     handleEditTask: propsHandleEditTask,
     handleAddTask: propsHandleAddTask,
-    editTask: propsEditTask, ...otherProps
+    editTask: propsEditTask,
+    ...otherProps
   } = props;
   const inputRef = useRef<HTMLInputElement>(null);
 

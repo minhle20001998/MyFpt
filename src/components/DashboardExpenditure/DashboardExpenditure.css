@@ -1,0 +1,49 @@
+.dashboard-expenditure {
+  margin-top: 2rem;
+  padding: 1rem 1rem 1rem 1rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+}
+
+.dashboard-expenditure .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.dashboard-expenditure .add-btn {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: #084e9a;
+}
+
+.expenditure-table {
+  border: 2px solid #084e9a !important;
+  box-shadow: 1px 1px 5px #022c58;
+}
+
+.expenditure-table th {
+  color: #084e9a;
+  border-bottom: 2px solid #084e9a !important;
+  box-shadow: 1px 1px 5px #022c58;
+}
+
+.expenditure-table th,
+.expenditure-table td {
+  font-weight: bold;
+  padding: 1rem 1rem !important;
+}
+
+.item-price {
+  color: tomato;
+}
+
+.expenditure-table button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #084e9a;
+  padding-left: 0;
+  padding-right: 1rem;
+}

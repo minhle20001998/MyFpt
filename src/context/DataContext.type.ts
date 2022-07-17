@@ -1,4 +1,5 @@
 import { EDCType } from "../components/DashboardEDC/DashboardEDC.type"
+import { ExpenditureType } from "../components/Modals/ExpenditureModals/ExpenditureModals.type"
 import { TaskType } from "../components/Modals/TaskModals/TaskModal.type"
 
 export interface PropsType {
@@ -9,7 +10,8 @@ export interface DataType {
   edc: EDCType[],
   paidDate: number,
   tasks: TaskType[],
-  username: string
+  username: string,
+  expenditure: ExpenditureType[]
 }
 
 export interface DataContextType {

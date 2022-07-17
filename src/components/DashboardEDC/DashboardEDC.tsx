@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import cloneDeep from 'lodash.clonedeep';
 import React, { useState } from 'react'
 import { useData } from '../../context/DataContext';
 import EDCModals from '../Modals/EDCModals/EDCModals';
@@ -16,12 +17,12 @@ export default function DashboardEDC() {
 
 
   const handleAddEDC = async (item: string) => {
-    if (item.trim() === "" || !edc || !updateData) {
+    if (item.trim() === "" || !updateData) {
       return;
     }
-    let currentEDC = [...edc];
-    if (!Array.isArray(currentEDC)) {
-      currentEDC = []
+    let currentEDC: EDCType[] = [];
+    if (edc) {
+      currentEDC = cloneDeep(edc);
     }
     currentEDC.push({ item })
     handleCloseModal();

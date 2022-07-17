@@ -27,12 +27,12 @@ export default function DashboardTasks() {
   }
 
   const handleAddTask = async (item: TaskType) => {
-    if (!validateTaskToAdd(item) || !tasks || !updateData) {
+    if (!validateTaskToAdd(item) || !updateData) {
       return;
     }
-    let currentTasks = cloneDeep(tasks);
-    if (!Array.isArray(currentTasks)) {
-      currentTasks = []
+    let currentTasks: TaskType[] = [];
+    if (tasks) {
+      currentTasks = cloneDeep(tasks);
     }
     currentTasks.push({ ...item })
     handleCloseModal();
@@ -47,11 +47,11 @@ export default function DashboardTasks() {
   }
 
   const handleEditTask = async (item: TaskType) => {
-    if (!validateTaskToAdd(item) || !tasks || !updateData) {
+    if (!validateTaskToAdd(item) || tasks === null || !updateData) {
       return;
     }
     let currentTasks = cloneDeep(tasks);
-    currentTasks = currentTasks.map((task: TaskType, index: number) => {
+    currentTasks = currentTasks?.map((task: TaskType, index: number) => {
       if (index === editID) {
         return item;
       }

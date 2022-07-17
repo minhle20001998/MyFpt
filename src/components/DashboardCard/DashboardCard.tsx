@@ -1,37 +1,42 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
+import { Textfit } from 'react-textfit';
 import { useData } from '../../context/DataContext';
+import { MoneyFormat } from '../../helpers/AllFormat';
+import { ExpenditureType } from '../Modals/ExpenditureModals/ExpenditureModals.type';
 import './DashboardCard.css'
 
 export default function DashboardCards() {
   const [dayInFpt, setDayInFpt] = useState(0);
   const [paidDay, setPaidDay] = useState(0);
+  const [moneySpent, setMoneySpent] = useState(0);
+
   const data = useData()?.data;
   const updateData = useData()?.updateData;
   const paidDate = data?.paidDate;
+  const expenditure = data?.expenditure
   const tasks = data?.tasks;
 
   const cardItems = [
     { title: 'DAYS IN FPT', data: dayInFpt, suffix: 'days' },
     { title: 'PAYDAY IN', data: paidDay, suffix: 'days' },
     { title: 'NUMBER OF TASKS', data: tasks?.length, suffix: 'tasks' },
-    { title: 'MONEY SPENT', data: 0, suffix: 'VND' }
+    { title: 'MONEY SPENT', data: MoneyFormat(moneySpent, true), suffix: 'VND' }
   ]
 
-  //caculate days in fpt
-  //caculate paid day
   useEffect(() => {
-    caculateDayInFpt();
     caculatePaidDay();
+    caculateMoneySpent();
+    caculateDayInFpt();
   }, [data])
 
   const caculateDayInFpt = () => {
-    const startDay = new Date(2022, 6, 21).getTime();
+    const startDay = new Date(2022, 6, 23).getTime();
     const today = new Date().getTime();
     setDayInFpt(Math.round((today - startDay) / 8.64e+7))
   }
 
-  const caculatePaidDay = async () => {
+  const caculatePaidDay = () => {
     if (!updateData) {
       return;
     }
@@ -40,32 +45,52 @@ export default function DashboardCards() {
     const thisPaidDate = new Date(thisYear + ((thisMonth === 11) ? 1 : 0), thisMonth + 1, 19).getTime();;
     const today = new Date().getTime();
     if (!paidDate || paidDate < today) {
-      await updateData({ paidDate: thisPaidDate });
+      updateData({ paidDate: thisPaidDate });
     } else {
       setPaidDay(Math.round((paidDate - today) / 8.64e+7))
     }
   }
 
+  const caculateMoneySpent = () => {
+    if (!expenditure) {
+      return;
+    }
+    const total = expenditure?.reduce((acc: number, value: ExpenditureType) => {
+      return acc + value.price
+    }, 0)
+    setMoneySpent(total);
+  }
+
   return <div className="homepage-cards" >
     {cardItems && cardItems.map((item) => {
-      return <DashboardOneCard title={item.title} data={item.data} suffix={item.suffix} key={item.title} />
+      return <DashboardOneCard item={item} key={item.title} />
     })
     }
   </div>
 }
 
 interface DashboardOneCardPropsType {
-  title: string,
-  data: number | undefined,
-  suffix: string
+  item: {
+    title: string,
+    data: number | string | undefined,
+    suffix: string
+  }
 }
 
 export function DashboardOneCard(props: DashboardOneCardPropsType) {
   return (
     <div className='dashboard-card'>
-      <p className="dashboard-card-title m-0">{props.title}</p>
-      <span className='dashboard-card-days-number'>{props.data}</span>
-      <span className='dashboard-card-suffix'>{props.suffix}</span>
+      <p className="dashboard-card-title m-0">{props.item.title}</p>
+      <Textfit
+        className='dashboard-card-days-number'
+        mode="single"
+        max={50}
+      >
+        <div className="d-flex align-items-baseline h-100">
+          <div>{props.item.data}</div>
+          <div className='dashboard-card-suffix'>{props.item.suffix}</div>
+        </div>
+      </Textfit>
     </div>
   )
 }

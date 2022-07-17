@@ -1,4 +1,6 @@
 .dashboard-card {
+  display: flex;
+  flex-direction: column;
   width: 15rem;
   height: 8rem;
   background-color: white;
@@ -7,18 +9,22 @@
 }
 
 .dashboard-card-days-number {
-  font-size: 3.5rem;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
   font-weight: bold;
   color: #ea6d22;
 }
 
 .dashboard-card-title {
   font-size: 1.25rem;
+  white-space: nowrap;
   font-weight: bold !important;
   color: #084e9a;
 }
 
 .dashboard-card-suffix {
+  font-size: 1.2rem !important;
   color: #084e9a;
   font-weight: bold;
   margin-left: 0.5rem;

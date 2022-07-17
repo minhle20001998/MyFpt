@@ -9,7 +9,8 @@ const defaultValueData: DataType = {
   edc: [],
   paidDate: 0,
   tasks: [],
-  username: 'Username'
+  username: 'Username',
+  expenditure: []
 }
 
 export default function DataProvider(props: PropsType) {
@@ -24,8 +25,10 @@ export default function DataProvider(props: PropsType) {
     querySnapshot.forEach((doc) => {
       rawData = doc
     });
-    setRawData(rawData);
-    setData(rawData.data());
+    if (rawData.data) {
+      setRawData(rawData);
+      setData(rawData.data());
+    }
   }
 
   const updateData = async (data: any) => {
