@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import DashboardCards from '../../components/DashboardCard/DashboardCard';
-import DashboardEDC from '../../components/DashboardEDC/DashboardEDC';
-import DashboardExpenditure from '../../components/DashboardExpenditure/DashboardExpenditure';
-import DashboardTasks from '../../components/DashboardTasks/DashboardTasks';
+import DashboardCards from '../Dashboard/components/DashboardCard/DashboardCard'
+import DashboardEDC from '../Dashboard/components/DashboardEDC/DashboardEDC'
+import DashboardExpenditure from '../Dashboard/components/DashboardExpenditure/DashboardExpenditure'
+import DashboardTasks from '../Dashboard/components/DashboardTasks/DashboardTasks'
 import './Homepage.css'
 export default function Homepage() {
 

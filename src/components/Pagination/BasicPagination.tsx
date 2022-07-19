@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Pagination } from 'react-bootstrap'
-
+import './BasicPagination.css'
 interface BasicPaginationProps {
   itemsPerPage?: number,
   itemsSize: number | undefined,

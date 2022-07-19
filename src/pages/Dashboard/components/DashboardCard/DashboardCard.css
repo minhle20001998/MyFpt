@@ -29,3 +29,7 @@
   font-weight: bold;
   margin-left: 0.5rem;
 }
+
+.sub {
+  font-size: 0.8rem !important;
+}

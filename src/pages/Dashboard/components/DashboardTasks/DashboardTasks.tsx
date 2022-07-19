@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react'
-import { useData } from '../../context/DataContext';
 import cloneDeep from 'lodash.clonedeep';
-import TaskModals from '../Modals/TaskModals/TaskModals';
 import './DashboardTasks.css'
-import { TaskType } from '../Modals/TaskModals/TaskModal.type';
+import { useData } from '../../../../context/DataContext';
+import { TaskType } from '../../../../components/Modals/TaskModals/TaskModal.type';
+import TaskModals from '../../../../components/Modals/TaskModals/TaskModals';
 export default function DashboardTasks() {
   const [isLoading, setIsLoading] = useState(false);
   const [editID, setEditID] = useState<number | null>(null);

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Button, Form, Modal } from 'react-bootstrap'
-import { EDCType } from '../../DashboardEDC/DashboardEDC.type';
+import { EDCType } from '../../../pages/Dashboard/components/DashboardEDC/DashboardEDC.type';
 import './EDCModals.css'
 
 interface EDCModalsPropsType {

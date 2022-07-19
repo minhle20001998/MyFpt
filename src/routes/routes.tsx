@@ -19,7 +19,8 @@ const routes = (props: PropsType) => {
       path: '/',
       element: <ProtectedRoutes><Dashboard /></ProtectedRoutes>,
       children: [
-        { path: '/', element: <Homepage /> }
+        { path: '/', element: <Homepage /> },
+        { path: '/notes', element: <></> }
       ]
     }
   ]

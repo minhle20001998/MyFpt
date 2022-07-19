@@ -1,0 +1,33 @@
+.pagination {
+  gap: 1.2rem;
+}
+
+.pagination li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.pagination li span,
+.pagination li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  color: #084e9a;
+  font-weight: bold;
+}
+
+.pagination li a:hover {
+  background-color: #084e9a;
+  color: white;
+}
+
+.page-item.active .page-link {
+  background-color: tomato !important;
+  border-color: tomato !important;
+}

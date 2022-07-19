@@ -1,11 +1,11 @@
 import cloneDeep from 'lodash.clonedeep';
 import React, { useState } from 'react'
 import { Table } from 'react-bootstrap'
-import { useData } from '../../context/DataContext';
-import { DateFormat, MoneyFormat } from '../../helpers/AllFormat';
-import ExpenditureModals from '../Modals/ExpenditureModals/ExpenditureModals';
-import { ExpenditureType } from '../Modals/ExpenditureModals/ExpenditureModals.type';
-import BasicPagination from '../Pagination/BasicPagination';
+import ExpenditureModals from '../../../../components/Modals/ExpenditureModals/ExpenditureModals';
+import { ExpenditureType } from '../../../../components/Modals/ExpenditureModals/ExpenditureModals.type';
+import BasicPagination from '../../../../components/Pagination/BasicPagination';
+import { useData } from '../../../../context/DataContext';
+import { DateFormat, MoneyFormat } from '../../../../helpers/AllFormat';
 import './DashboardExpenditure.css'
 
 export const CONTENT_PER_PAGE = 5;

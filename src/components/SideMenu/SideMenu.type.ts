@@ -1,4 +1,5 @@
 export interface MenuType {
   title: string,
-  active: string
+  active: string,
+  link: string
 }

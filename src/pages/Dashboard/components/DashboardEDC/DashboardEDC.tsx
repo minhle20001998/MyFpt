@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import cloneDeep from 'lodash.clonedeep';
 import React, { useState } from 'react'
-import { useData } from '../../context/DataContext';
-import EDCModals from '../Modals/EDCModals/EDCModals';
+import EDCModals from '../../../../components/Modals/EDCModals/EDCModals';
+import { useData } from '../../../../context/DataContext';
 import './DashboardEDC.css'
 import { EDCType } from './DashboardEDC.type';
 
